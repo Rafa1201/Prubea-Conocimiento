@@ -1,0 +1,119 @@
+html,
+body {
+    padding: 0%;
+    margin: 0%;
+    width: 100vh;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+h2{
+    padding: auto;
+    margin-top: auto;
+}
+
+.divpassword {
+    background-image: url(/Prueba_de_Conocimientos/assets/img/fondo.jpg);
+    background-size: 100%;
+    background-position: center center;
+    width: 210%;
+    height: 100%;
+    padding: auto;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.divpassword .cubo {
+    width: 100%;
+    text-align: center;
+}
+
+.divpassword .cubo .cubo-con {
+    width: 100%;
+    max-width: 300px;
+    background: burlywood;
+    padding: 30px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.divpassword .cubo .cubo-con input {
+    height: 30px;
+    margin: 0px;
+    border: 0px;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.divpassword .cubo .cubo-con .inpute.grupo{
+    width: 50px;
+}
+
+.divpassword .cubo .cubo-con .table{
+    column-width: 10cm;
+    margin: 0%;
+ 
+   margin-left: -130px;
+}
+
+table{
+    background-color:blanchedalmond;
+    padding: 0px;
+    margin: 0px;
+    text-align: right;
+    width:  max-content;
+}
+
+th, td{
+    border: solid 2px black;
+    width: max-content;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+thead{
+    background-color: lemonchiffon;
+    border-bottom: solid 5px tomato;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+
+}
+
+
+
+
+
+.divpassword .cubo .cubo-con button {
+    margin: 0px;
+    border: 0px;
+    display: block;
+    margin: auto;
+    padding: 10px 30px;
+    background: rgb(179, 35, 35);
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.divpassword .cubo .cubo-con .boton {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    padding: 8px;
+    background-color: rgb(179, 35, 35);
+    background-size: cover;
+    color: linen;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 50px darkgreen;
+}

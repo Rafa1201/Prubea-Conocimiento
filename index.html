@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba de Conocimientos</title>
+    <link rel="stylesheet" href="Css/styles.css" />
+  </head>
+  <body>
+    <div id="app" class="divpassword">
+      <div class="cubo">
+        <div class="cubo-con">
+          <h2>Creador de Contraseña</h2>
+          <form onload="listar()">
+            <input
+              type="email"
+              placeholder="Email"
+              v-model="account_name"
+              class="form-control"
+            />
+            <input
+              type="text"
+              placeholder="Nombre de Usuario"
+              v-model="username"
+            />
+            
+              <input
+                class="pas1"
+                id="pass"
+                type="password"
+                placeholder="Contraseña "
+                v-model="password"
+              />
+              <input
+                class="pas2"
+                id="pass2"
+                type="text"
+                placeholder="Contraseña aleatoria"
+                v-model="password"
+              />
+            
+            <input
+              type="url"
+              placeholder="URL"
+              v-model="site_url"
+              class="form-control"
+            />
+            <input
+              type="url"
+              placeholder="URL del Icono"
+              v-model="logo_url"
+              class="form-control"
+            />
+            <input type="date" v-model="created_at" class="form-control" />
+            <input
+              @click="guardar"
+              type="button"
+              value="Guardar"
+              class="btn form-control"
+            />
+            <input
+              @click="ramdonpass"
+              type="button"
+              value="Genrar contraseña Aleatoria"
+              class="btn form-control"
+            />
+            <section class="data">
+                <caption> <h3>Contraseñas</h3></caption>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Cuenta</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Contraseña</th>
+                        <th scope="col">URL</th>
+                        <th scope="col">URL Icono</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="ticket in tickets">
+                        <td>{{ ticket.id }}</td>
+                        <td>{{ ticket.account_name }}</td>
+                        <td>{{ ticket.username }}</td>
+                        <td>{{ ticket.password }}</td>
+                        <td>{{ ticket.site_url }}</td>
+                        <td>{{ ticket.logo_url }}</td>
+                        <td>{{ ticket.created_at }}</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td><input @click="borrar(ticket.id)" type="button" value="Borrar" class="btn form-control"/></td>
+                                    <td><input @click="editar(ticket.id)" type="button" value="Editar" class="btn form-control"/></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </caption>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.2/axios.js"></script>
+    <script src="Js/script.js"></script>
+    <script>
+      Vue.prototype.$http = axios;
+    </script>
+  </body>
+</html>
